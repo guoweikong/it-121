@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Chapter 3 HTML Program</title>
+</head>
+<body>
+<script>
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var setDate = new Date();
+
+console.log(setDate);
+
+document.write("We have 12 months - Now is " + setDate.getDate()); 
+document.write(" " + months[setDate.getMonth()]); document.write(" " + setDate.getFullYear() + ". ");
+
+setDate.setMonth(setDate.getMonth()+12);
+  
+document.write("After 12 months is " + setDate.getDate()); document.write(" " + months[setDate.getMonth()]); document.write(" " + setDate.getFullYear());
+  
+</script>
+  
+</body>
