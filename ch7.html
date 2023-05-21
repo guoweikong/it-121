@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Chapter_7 Assignment</title>
+
+</head>
+
+<body>
+
+<img src="usaflag.jpeg" onclick="changeImg(event)" />
+
+<img src="chinaflag.jpeg" onclick="changeImg(event)" />
+
+<img src="canadaflag.jpeg" onclick="changeImg(event)" />
+
+<script>
+    // set an array of flag.
+    flag = ["usaflag.jpeg", "chinaflag.jpeg", "canadaflag.jpeg"];
+
+    function changeImg(e) {
+        var et = e.target;
+        // get a random index from the flag array
+        flagIndex = Math.floor(Math.random() * flag.length);
+
+        // Aovid same image when click
+        while(et.src.indexOf(flag[flagIndex]) != -1) {
+            flagIndex = Math.floor(Math.random() * flag.length);
+        }
+
+        // set a new image
+        et.src = flag[flagIndex];
+        
+    }
+
+
+
+</script>
+
+</body>
+
+</html>
